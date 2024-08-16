@@ -1,13 +1,13 @@
 <template>
   <draggable
-    class="list-group"
-    tag="ul"
+    class="listGroup"
     item-key="id"
     :list="toDoList"
     name= "!drag ? 'flip-list' : null"
     v-bind="dragOptions"
     @start="drag = true"
     @end="handleDragEnd"
+    v-auto-animate
   >
     <template #item="{ element }">
       <li :key="element.id" class="listItem" :class="{ done: element.done }">
@@ -80,4 +80,5 @@ const dragOptions = {
   ghostClass: 'ghost'
 };
 </script>
+
 

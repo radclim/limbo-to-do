@@ -28,6 +28,6 @@ export default defineConfig({
                 'background-color': '#1e1fa1',
             };
         }],
-        ['done', {'text-decoration': 'line-through', color: "#b5b5b5", border: '1px solid #b2aaab'}],
+        ['done', {'text-decoration': 'line-through', color: "#b5b5b5", border: '1px solid #b2aaab', opacity: '0.3'}],
     ]
 })
