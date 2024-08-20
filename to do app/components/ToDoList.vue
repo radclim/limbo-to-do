@@ -11,7 +11,7 @@
     v-auto-animate
   >
     <template #item="{ element }">
-      <li :key="element.id" class="text-primary font-sans grid grid-cols-[1fr_6fr_1fr_1fr_1fr] items-center p-6 w-75vw hover:cursor-grab md: w-60vw" :class="{ 'opacity-44': element.done }">
+      <li :key="element.id" class="text-primary font-sans grid grid-cols-[1fr_6fr_1fr_1fr_1fr] items-center p-6 w-75vw hover:cursor-grab md:w-55vw sm:w-55vw xs:w-50vw" :class="{ 'opacity-44': element.done }">
         <template v-if="element.isEditing">
           <div class="dropdownContainer">
           <select :value="element.editTag" @change="$emit('editTag', element.id, $event.target.value)" class="border-1 border-primary border-solid bg-secondary text-primary p-4">
@@ -32,7 +32,7 @@
         </template>
         <template v-else>
           <div class="text-center">{{ getEmoji(element.tag) }}</div>
-          <div>{{ element.text }}</div>
+          <div class="w-40vw break-words pr-4">{{ element.text }}</div>
           <button class="max-w-fit text-primary bg-secondary border-none transition duration-200 ease-in-out hover:cursor-pointer hover:scale-103" @click="$emit('edit', element.id, element.tag)">
             <i class="fa-solid fa-pen-to-square"></i>
           </button>
