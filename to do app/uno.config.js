@@ -6,7 +6,7 @@ export default defineConfig({
     colors: {
       primary: '#f0cfd0',
       'primary-shadow': '#b2aaab',
-      secondary: '#1e1fa1'
+      secondary: '#1e1fa1',
     },
     fontFamily: {
       sans: ['Arial, Helvetica, sans-serif']

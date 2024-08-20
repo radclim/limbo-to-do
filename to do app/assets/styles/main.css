@@ -1,12 +1,16 @@
 :root {
     --bg: #1e1fa1;
+    --ghost: #9a9aba5f;
 }
 body {
     background-color: var(--bg);
 }
 .done {
   text-decoration: line-through;
-  color: rgba(181, 181, 181, 0.3);
+  color: var(--ghost);
+}
+.done button {
+  color: var(--ghost);
 }
 .ghost {
   opacity: 0.15;
